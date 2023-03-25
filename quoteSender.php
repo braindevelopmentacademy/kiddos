@@ -9,9 +9,8 @@ if (isset($_POST['submitFromIndex'])){
     $message = "Got quote request from website find the information below: \n \n $firstName $lastName \n course requested: $courseValue \n phone number $phoneNumber"
 
     $mailTo = "braindevelop.0408@gmail.com";
-    $headers = "From: ".$email;
     
-    mail($mailTo, $subject, $message, $headers);
+    mail($mailTo, $subject, $message);
     header("Location: index.html?mailsend");
 
 }
