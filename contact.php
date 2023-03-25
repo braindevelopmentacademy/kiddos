@@ -8,9 +8,8 @@ if (isset($_POST['submitFromContact'])){
 
     $mailTo = "braindevelop.0408@gmail.com";
     $headers = "From: ".$email;
-    $txt = "Message from website: ".$name.".\n\n".$message;
-
-    mail($mailTo, $subject, $text, $headers);
-    header("Location: index.php?mailsend");
+    
+    mail($mailTo, $subject, $message, $headers);
+    header("Location: index.html?mailsend");
 
 }
